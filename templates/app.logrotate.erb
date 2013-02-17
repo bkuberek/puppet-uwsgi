@@ -1,0 +1,12 @@
+#
+# NOTE: This file is managed by puppet. Local changes will be overwritten.
+#
+
+<%= @logdir %>/<%= @name %>.log {
+     size 100M
+     missingok
+     copytruncate
+     rotate 10
+     compress
+     notifempty
+}

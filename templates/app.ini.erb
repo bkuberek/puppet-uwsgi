@@ -1,0 +1,53 @@
+#
+# NOTE: This file is managed by puppet. Local changes will be overwritten.
+#
+
+[uwsgi]
+<% if @socket -%>
+  socket           = <%= @socket %>
+<% end -%>
+<% if @module -%>
+  module           = <%= @module %>
+<% end -%>
+<% if @master -%>
+  master           = <%= @master %>
+<% end -%>
+<% if @workers -%>
+  workers          = <%= @workers %>
+<% end -%>
+<% if @auto_procname -%>
+  auto-procname    = <%= @auto_procname %>
+<% end -%>
+<% if @procname_prefix -%>
+  procname-prefix  = <%= @procname_prefix %>
+<% end -%>
+<% if @threads -%>
+  threads          = <%= @threads %>
+<% end -%>
+<% if @harakiri -%>
+  harakiri         = <%= @harakiri %>
+<% end -%>
+<% if @thread_stacksize -%>
+  thread_stacksize = <%= @thread_stacksize %>
+<% end -%>
+<% plugins.each do |plugin| -%>
+  plugins          = <%= plugin %>
+<% end -%>
+<% if @postbuffering -%>
+  post-buffering   = <%= @postbuffering %>
+<% end -%>
+<% if @uid -%>
+  uid              = <%= @uid %>
+<% end -%>
+<% if @gid -%>
+  gid              = <%= @gid %>
+<% end -%>
+<% if @touchreload -%>
+  touch-reload     = <%= @touchreload %>
+<% end -%>
+<% if @chdir -%>
+  chdir            = <%= @chdir %>
+<% end -%>
+<% if @extra_conf -%>
+<%= @extra_conf %>
+<% end -%>
