@@ -59,6 +59,7 @@ class uwsgi (
       'uwsgi-plugin-syslog',
       'uwsgi-plugin-ugreen',
     ]:
+    tag    => 'virtualresource',
     notify => Service['uwsgi'],
   }
 
