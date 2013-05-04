@@ -67,7 +67,7 @@ class uwsgi (
   #       installation of the dependent package without conflicts.
   @uwsgi::plugin {
     ['admin']               : package => 'uwsgi-plugin-admin';
-    ['all']                 : package => 'uwsgi-plugin-all';
+    ['all']                 : package => 'uwsgi-plugins-all';
     ['integration']         : package => 'uwsgi-app-integration-plugins';
     ['cache']               : package => 'uwsgi-plugin-cache';
     ['carbon']              : package => 'uwsgi-plugin-carbon';
@@ -93,8 +93,8 @@ class uwsgi (
     ['pyerl-python3']       : package => 'uwsgi-plugin-pyerl-python3';
     ['python26', 'python27']: package => 'uwsgi-plugin-python';
     ['python3']             : package => 'uwsgi-plugin-python3';
-    ['rack-ruby18']         : package => 'uwsgi-plugin-rack-ruby18';
-    ['rack-ruby191']        : package => 'uwsgi-plugin-rack-ruby191';
+    ['rack-ruby18']         : package => 'uwsgi-plugin-rack-ruby1.8';
+    ['rack-ruby191']        : package => 'uwsgi-plugin-rack-ruby1.9.1';
     ['rpc']                 : package => 'uwsgi-plugin-rpc';
     ['rrdtool']             : package => 'uwsgi-plugin-rrdtool';
     ['rsyslog']             : package => 'uwsgi-plugin-rsyslog';
