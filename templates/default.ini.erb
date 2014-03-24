@@ -32,16 +32,16 @@
 # Example: name of '/etc/uwsgi/apps-enabled/site.ini' is 'site'.
 
 # try to autoload appropriate plugin if "unknown" option has been specified
-autoload = <%= auto_load %>
+autoload = <%= @auto_load %>
 
 # enable master process manager
-master = <%= master %>
+master = <%= @master %>
 
 # spawn # uWSGI worker processes
-workers = <%= workers %>
+workers = <%= @workers %>
 
 # automatically kill workers on master's death
-no-orphans = <%= no_orphans %>
+no-orphans = <%= @no_orphans %>
 
 # write master's pid in file /run/uwsgi/<confnamespace>/<confname>/pid
 pidfile = /var/run/uwsgi/%(deb-confnamespace)/%(deb-confname)/pid
@@ -50,17 +50,17 @@ pidfile = /var/run/uwsgi/%(deb-confnamespace)/%(deb-confname)/pid
 socket = /var/run/uwsgi/%(deb-confnamespace)/%(deb-confname)/socket
 
 # set mode of created UNIX socket
-chmod-socket = <%= chmod_socket %>
+chmod-socket = <%= @chmod_socket %>
 
 # place timestamps into log
-log-date = <%= log_date %>
+log-date = <%= @log_date %>
 
 # user identifier of uWSGI processes
-uid = <%= uid %>
+uid = <%= @uid %>
 
 # group identifier of uWSGI processes
-gid = <%= gid %>
+gid = <%= @gid %>
 
 <% if @extra_conf -%>
-<%= extra_conf %>
+<%= @extra_conf %>
 <% end -%>
