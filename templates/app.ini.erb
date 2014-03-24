@@ -30,7 +30,7 @@
 <% if @thread_stacksize -%>
   thread_stacksize = <%= @thread_stacksize %>
 <% end -%>
-<% plugins.each do |plugin| -%>
+<% @plugins.each do |plugin| -%>
   plugins          = <%= plugin %>
 <% end -%>
 <% if @postbuffering -%>
